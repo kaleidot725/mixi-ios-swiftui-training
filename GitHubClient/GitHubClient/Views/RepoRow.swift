@@ -1,20 +1,29 @@
-//
-//  RepoRow.swift
-//  GitHubClient
-//
-//  Created by 桂川 祐介 on 2023/06/10.
-//
-
 import SwiftUI
 
 struct RepoRow: View {
+    let repo: Repo
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center) {
+            Image("github-mark")
+                .resizable()
+                .frame(width: 44.0, height: 44.0)
+            
+            VStack(alignment: .leading) {
+                Text(repo.owner.name)
+                    .font(.caption)
+                
+                Text(repo.name)
+                    .font(.body)
+                    .fontWeight(.semibold)
+            }
+        }
     }
 }
 
 struct RepoRow_Previews: PreviewProvider {
     static var previews: some View {
-        RepoRow()
+        RepoRow(
+            repo: .mock1
+        )
     }
 }
