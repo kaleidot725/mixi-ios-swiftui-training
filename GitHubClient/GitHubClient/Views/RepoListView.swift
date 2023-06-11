@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RepoListView: View {
     private let mockRepos = [
         Repo(id: 1, name: "REPO NAME1", user: User(name: "USER NAME1")),
         Repo(id: 2, name: "REPO NAME2", user: User(name: "USER NAME2")),
@@ -27,7 +27,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RepoListView()
     }
 }
 
