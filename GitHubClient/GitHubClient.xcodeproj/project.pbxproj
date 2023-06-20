@@ -19,6 +19,7 @@
 		CAC9CC382A346058007AD60E /* RepoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC372A346058007AD60E /* RepoRow.swift */; };
 		CAC9CC412A346510007AD60E /* User+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC3F2A346510007AD60E /* User+mock.swift */; };
 		CAC9CC422A346510007AD60E /* Repo+mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC402A346510007AD60E /* Repo+mock.swift */; };
+		CAC9CC452A39EBE5007AD60E /* RepoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC442A39EBE5007AD60E /* RepoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CAC9CC372A346058007AD60E /* RepoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRow.swift; sourceTree = "<group>"; };
 		CAC9CC3F2A346510007AD60E /* User+mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+mock.swift"; sourceTree = "<group>"; };
 		CAC9CC402A346510007AD60E /* Repo+mock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repo+mock.swift"; sourceTree = "<group>"; };
+		CAC9CC442A39EBE5007AD60E /* RepoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				CAC9CC2F2A345B15007AD60E /* Repo.swift */,
 				CAC9CC312A345B22007AD60E /* User.swift */,
+				CAC9CC442A39EBE5007AD60E /* RepoStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CAC9CC412A346510007AD60E /* User+mock.swift in Sources */,
 				CAC9CC352A345FF2007AD60E /* RepoDetailView.swift in Sources */,
 				CAC9CC302A345B15007AD60E /* Repo.swift in Sources */,
+				CAC9CC452A39EBE5007AD60E /* RepoStore.swift in Sources */,
 				CAC9CC082A344522007AD60E /* RepoListView.swift in Sources */,
 				CAC9CC422A346510007AD60E /* Repo+mock.swift in Sources */,
 				CAC9CC382A346058007AD60E /* RepoRow.swift in Sources */,

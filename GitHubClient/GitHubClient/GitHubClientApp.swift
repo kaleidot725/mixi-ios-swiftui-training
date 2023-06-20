@@ -11,11 +11,7 @@ import SwiftUI
 struct GitHubClientApp: App {
     var body: some Scene {
         WindowGroup {
-            RepoListView(
-                repos: [
-                    Repo(id: 1, name: "NAME", owner: User(name: "USER"),description: "DESCRIPTION", stargazersCount: 0)
-                ]
-            )
+            RepoListView()
         }
     }
 }
