@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var reposStore = RepoStore()
+    @StateObject private var repoListViewModel = RepoListViewModel(
+        repoApiClient: RepoAPIClient()
+    )
     
     var body: some View {
         NavigationView {
             Group {
-                switch reposStore.state {
+                switch repoListViewModel.state {
                 case .loading:
                     ProgressView("loading...")
                 case let .success(repos):
@@ -21,7 +23,7 @@ struct RepoListView: View {
                         Button(
                             action: {
                                 Task {
-                                    await reposStore.loadRepos()
+                                    await repoListViewModel.fetch()
                                 }
                             },
                             label: {
@@ -34,7 +36,7 @@ struct RepoListView: View {
             }
             .navigationTitle("Repositories")
         }.task {
-            await reposStore.loadRepos()
+            await repoListViewModel.fetch()
         }
     }
 }
