@@ -1,14 +1,18 @@
 import SwiftUI
 
 struct RepoListView: View {
-    @StateObject private var repoListViewModel = RepoListViewModel(
-        repoApiClient: RepoAPIClient()
-    )
+    @StateObject private var viewModel: RepoListViewModel
+    
+    init(repoAPIClient: RepoAPIClientProtocol) {
+        self._viewModel = StateObject(
+            wrappedValue: RepoListViewModel(repoApiClient: repoAPIClient)
+        )
+    }
     
     var body: some View {
         NavigationView {
             Group {
-                switch repoListViewModel.state {
+                switch viewModel.state {
                 case .loading:
                     ProgressView("loading...")
                 case let .success(repos):
@@ -23,7 +27,7 @@ struct RepoListView: View {
                         Button(
                             action: {
                                 Task {
-                                    await repoListViewModel.fetch()
+                                    await viewModel.fetch()
                                 }
                             },
                             label: {
@@ -36,13 +40,31 @@ struct RepoListView: View {
             }
             .navigationTitle("Repositories")
         }.task {
-            await repoListViewModel.fetch()
+            await viewModel.fetch()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    struct DummyError: Error {}
+    
     static var previews: some View {
-        RepoListView()
+        RepoListView(
+            repoAPIClient: MockRepoApiClient(
+                repos: [
+                    .mock1, .mock2, .mock3, .mock4, .mock5
+                ],
+                error: nil
+            )
+        )
+        .previewDisplayName("Default")
+        
+        RepoListView(
+            repoAPIClient: MockRepoApiClient(
+                repos: [],
+                error: DummyError()
+            )
+        )
+        .previewDisplayName("Error")
     }
 }

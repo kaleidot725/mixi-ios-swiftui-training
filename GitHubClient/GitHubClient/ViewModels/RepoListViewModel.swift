@@ -1,10 +1,10 @@
 import Foundation
 
 class RepoListViewModel: ObservableObject {
-    private let repoApiClient: RepoAPIClient
+    private let repoApiClient: RepoAPIClientProtocol
     @Published private (set) var state = Stateful<[Repo]>.loading
 
-    init(repoApiClient: RepoAPIClient) {
+    init(repoApiClient: RepoAPIClientProtocol) {
         self.repoApiClient = repoApiClient
     }
     

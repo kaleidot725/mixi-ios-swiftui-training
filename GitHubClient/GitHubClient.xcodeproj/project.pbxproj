@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA70DF932A431C3000DBB1C1 /* RepoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70DF922A431C3000DBB1C1 /* RepoAPIClient.swift */; };
 		CA70DF962A431E9700DBB1C1 /* RepoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70DF952A431E9700DBB1C1 /* RepoListViewModel.swift */; };
+		CA70DF982A433B5400DBB1C1 /* MockRepoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70DF972A433B5400DBB1C1 /* MockRepoAPIClient.swift */; };
 		CAC9CC062A344522007AD60E /* GitHubClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC052A344522007AD60E /* GitHubClientApp.swift */; };
 		CAC9CC082A344522007AD60E /* RepoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC9CC072A344522007AD60E /* RepoListView.swift */; };
 		CAC9CC0A2A344526007AD60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC9CC092A344526007AD60E /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		CA70DF922A431C3000DBB1C1 /* RepoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoAPIClient.swift; sourceTree = "<group>"; };
 		CA70DF952A431E9700DBB1C1 /* RepoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListViewModel.swift; sourceTree = "<group>"; };
+		CA70DF972A433B5400DBB1C1 /* MockRepoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepoAPIClient.swift; sourceTree = "<group>"; };
 		CAC9CC022A344522007AD60E /* GitHubClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC9CC052A344522007AD60E /* GitHubClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientApp.swift; sourceTree = "<group>"; };
 		CAC9CC072A344522007AD60E /* RepoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoListView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				CAC9CC402A346510007AD60E /* Repo+mock.swift */,
 				CAC9CC3F2A346510007AD60E /* User+mock.swift */,
+				CA70DF972A433B5400DBB1C1 /* MockRepoAPIClient.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				CAC9CC382A346058007AD60E /* RepoRow.swift in Sources */,
 				CAC9CC062A344522007AD60E /* GitHubClientApp.swift in Sources */,
 				CA70DF932A431C3000DBB1C1 /* RepoAPIClient.swift in Sources */,
+				CA70DF982A433B5400DBB1C1 /* MockRepoAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
